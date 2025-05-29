@@ -1,7 +1,7 @@
 class No:
-    def __init__(self, dado, prox=None):
+    def __init__(self, dado=None):
         self.__dado = dado
-        self.__prox = prox
+        self.__prox = None
     
     @property
     def dado(self):
@@ -77,6 +77,7 @@ class Lista:
             p = p.prox
             pos += 1
         return -1  # Retorna -1 se o dado não for encontrado na lista
+    
     def remover(self, dado):
         if self.vazia() == True:
             print ('Não há itens na lista')
